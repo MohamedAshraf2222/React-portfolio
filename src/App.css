@@ -29,6 +29,11 @@
   -ms-transition: 1.0s;
   -o-transition: 1.0s;
 }
+.inActive{
+  border-bottom: none !important;
+  padding: 0px 0;
+  
+}
 .navLink:hover{
   border-bottom: 4px solid #4070f4 !important;
 

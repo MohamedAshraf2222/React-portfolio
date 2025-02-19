@@ -50,7 +50,21 @@ const Navbar = () => {
   return (
     <header className="shadow w-full fixed top-0 left-0 z-[100] bg-white">
       <nav className="flex justify-between items-center px-6 md:px-24 py-4 font-semibold">
-        <img className="w-10 cursor-pointer" src={logo} alt="logo" />
+        <Link
+          to={"header"}
+          className="inActive"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={-100}
+          duration={500}
+          isDynamic={true}
+          ignoreCancelEvents={false}
+          spyThrottle={500}
+          activeClass=""
+        >
+          <img className="w-10 cursor-pointer" src={logo} alt="logo" />
+        </Link>
         <div className="md:hidden cursor-pointer" onClick={toggleMobileMenu}>
           {isMobileMenuOpen ? <CloseIcon /> : <MenuIcon />}
         </div>
@@ -68,8 +82,8 @@ const Navbar = () => {
               onSetActive={() => setSection(link.hash)}
               className={`navLink ${
                 section === link.hash
-                  ? "active border-b-4 border-solid border-[#4070f4] py-2"
-                  : "border-b-4 border-solid border-white py-2"
+                  ? "active border-b-4 border-solid border-[#4070f4] py-2 cursor-pointer"
+                  : "border-b-4 border-solid border-white py-2 cursor-pointer"
               }`}
               spy={true}
               smooth={true}

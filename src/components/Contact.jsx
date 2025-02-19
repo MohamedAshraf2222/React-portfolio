@@ -40,10 +40,11 @@ const Contact = () => {
       });
   };
 
+  const date= new Date()
   return (
     <div
       id="contact"
-      className="bg-[#0e2431] text-white py-12 px-6 sm:px-12 lg:px-24"
+      className="bg-[#0e2431] text-white pb-8 pt-12 px-6 sm:px-12 lg:px-24"
     >
       <SectionHeader header={"Contact"} />
 
@@ -151,6 +152,9 @@ const Contact = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mt-4">
+        &copy; {date.getFullYear()} copyright all right reserved
       </div>
     </div>
   );
