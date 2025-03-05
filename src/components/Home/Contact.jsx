@@ -1,5 +1,5 @@
-import SectionHeader from "../commons/SectionHeader";
-import { commonData } from "../assets/common"; // Assuming you have a commonData file for contact info
+import SectionHeader from "../../commons/SectionHeader";
+import { commonData } from "../../assets/common"; // Assuming you have a commonData file for contact info
 import { FaLinkedin, FaGithub, FaEnvelope, FaPhone } from "react-icons/fa"; // Icons for social media
 import emailjs from "emailjs-com"; // Import EmailJS
 import { useState } from "react"; // For handling form state and success/error messages

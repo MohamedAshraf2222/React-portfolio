@@ -1,26 +1,18 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import {
-  About,
-  Navbar,
-  Header,
-  Contact,
-  Skills,
-  Projects,
-  Experience,
-} from "./components";
+import Home from "./Pages/Home";
+import Project from "./Pages/Project";
 
 function App() {
-  // محتاجين Loader ,زرار في الاخر يطلعك فوق ولينك الواتساب 
+  // محتاجين Loader ,زرار في الاخر يطلعك فوق ولينك الواتساب
 
   return (
     <>
-      <Navbar />
-      <Header />
-      <About />
-      <Experience />
-      <Projects />
-      <Skills />
-      <Contact />
+      <Routes>
+        <Route index element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/project/:projectId" element={<Project />} />
+      </Routes>
     </>
   );
 }

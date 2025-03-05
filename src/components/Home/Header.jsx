@@ -1,5 +1,5 @@
-import cv from "../assets/Mohamed_Ashraf-Feb-2025.pdf";
-import headerGIF from "../assets/web-development.gif";
+import cv from "../../assets/Mohamed_Ashraf-Feb-2025.pdf";
+import headerGIF from "../../assets/web-development.gif";
 
 const Header = () => {
 return (

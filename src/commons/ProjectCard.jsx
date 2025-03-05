@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "reactstrap";
 
 const ProjectCard = ({
+  id,
   name,
   description,
   tags,
@@ -11,24 +12,32 @@ const ProjectCard = ({
   source_code_link,
   live_demo_link,
 }) => {
+
+      const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      };
   return (
     <>
       <div className="flex flex-col justify-between p-4 sm:p-5 w-[90%] h-auto rounded-2xl shadow sm:w-[360px] works-hover">
         {/* Image Section */}
         <div>
-          <div className="relative w-full h-[180px] sm:h-[230px]">
-            <img
-              src={image}
-              alt={"image"}
-              className="object-cover w-full h-full rounded-2xl"
-            />
-          </div>
+          <Link to={`/project/${id}`} onClick={()=>scrollToTop()}>
+            <div className="relative w-full h-[180px] sm:h-[230px] transition-all duration-300 hover:scale-[1.05]">
+              <img
+                src={image}
+                alt={"image"}
+                className="object-cover w-full h-full rounded-2xl"
+              />
+            </div>
+          </Link>
 
           {/* Content Section */}
           <div className="mt-4 sm:mt-5">
-            <h3 className="font-bold text-xl sm:text-[24px]">{name}</h3>
+            <Link to={`/project/${id}`}>
+              <h3 className="font-bold text-xl sm:text-[24px]">{name}</h3>
+            </Link>
             <p className="text-secondary text-sm sm:text-[14px] mt-2 sm:mt-4 mb-6 sm:mb-10">
-              {description.slice(0, 100)}...
+              {description.slice(2, 100)}...
             </p>
           </div>
         </div>
@@ -77,20 +86,6 @@ const ProjectCard = ({
       </div>
     </>
   );
-};
-
-ProjectCard.propTypes = {
-  name: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  tags: PropTypes.arrayOf(
-    PropTypes.shape({
-      name: PropTypes.string.isRequired,
-      color: PropTypes.string.isRequired,
-    })
-  ).isRequired,
-  image: PropTypes.string.isRequired,
-  source_code_link: PropTypes.string.isRequired,
-  live_demo_link: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

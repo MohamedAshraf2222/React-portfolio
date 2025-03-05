@@ -1,6 +1,6 @@
-import { technologies } from "../assets/data";
-import SectionHeader from "../commons/SectionHeader";
-import SkillCard from "../commons/SkillCard";
+import { technologies } from "../../assets/data";
+import SectionHeader from "../../commons/SectionHeader";
+import SkillCard from "../../commons/SkillCard";
 const Skills = () => {
   return (
     <div id="skills">

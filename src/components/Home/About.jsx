@@ -1,7 +1,7 @@
 import { Container } from "reactstrap";
-import SectionHeader from "../commons/SectionHeader";
-import { commonData } from "../assets/common";
-import devAvatar from "../assets/developer-avatar.png";
+import SectionHeader from "../../commons/SectionHeader";
+import { commonData } from "../../assets/common";
+import devAvatar from "../../assets/developer-avatar.png";
 import { useState } from "react";
 import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
@@ -21,7 +21,7 @@ const About = () => {
   };
 
   return (
-    <div className="mt-16 mb-8" id="about">
+    <div className="pt-16 pb-8" id="about">
       <Container>
         <SectionHeader header={"About"} />
         {/* Image */}
