@@ -29,14 +29,14 @@ const Project = () => {
 
           <Link
             to={"/"}
-            className={`navLink border-b-4 border-solid border-white py-2 cursor-pointer`}
+            className={`border-b-4 border-solid border-white py-2 cursor-pointer`}
           >
             Home
           </Link>
         </nav>
       </header>
       <div className="mt-[130px]">
-        <div className="flex flex-col lg:flex-row mb-10 px-4 sm:px-10 md:px-20 lg:px-40">
+        <div className="flex flex-col lg:gap-20 mb-10 px-4 sm:px-10 md:px-20 lg:px-40">
           <div className="items-stretch w-full lg:flex-1">
             {isImageLoading && (
               <div className="text-center w-full h-full flex justify-center items-center">
@@ -52,8 +52,8 @@ const Project = () => {
               src={project.image}
               alt="project Image"
               loading="lazy"
-              onLoad={()=>setIsImageLoading(false)}
-              onError={()=>setIsImageLoading(false)}
+              onLoad={() => setIsImageLoading(false)}
+              onError={() => setIsImageLoading(false)}
             />
           </div>
           <div className="flex flex-col mt-6 lg:mt-0 lg:mx-16 lg:flex-1 justify-between">
