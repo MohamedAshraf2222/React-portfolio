@@ -7,10 +7,8 @@ const Skills = () => {
       <SectionHeader header={"Skills"} />
       <div className="flex justify-center items-center w-full">
         <div className="flex flex-wrap justify-center w-[80%] items-center gap-6 my-8">
-          {technologies.map((tech) => (
-              <>
-                <SkillCard icon={tech.icon} name={tech.name} />
-              </>
+          {technologies.map((tech,i) => (
+                <SkillCard key={i} icon={tech.icon} name={tech.name} />
             )
           )}
         </div>

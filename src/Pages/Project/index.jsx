@@ -2,8 +2,9 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../../assets/data";
 import { Contact } from "../../components/Home";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo.jpeg";
 import { Button } from "reactstrap";
+import { useState } from "react";
 
 const Project = () => {
   const { projectId } = useParams();
@@ -11,6 +12,8 @@ const Project = () => {
   const project = projects.find((e) =>
     projectId ? e.id === +projectId : null
   );
+  const [isImageLoading, setIsImageLoading] = useState(true);
+
   return (
     <>
       <header className="shadow w-full fixed top-0 left-0 z-[100] bg-white">
@@ -35,11 +38,22 @@ const Project = () => {
       <div className="mt-[130px]">
         <div className="flex flex-col lg:flex-row mb-10 px-4 sm:px-10 md:px-20 lg:px-40">
           <div className="items-stretch w-full lg:flex-1">
+            {isImageLoading && (
+              <div className="text-center w-full h-full flex justify-center items-center">
+                <i
+                  className="mdi mdi-loading mdi-spin me-2"
+                  style={{ fontSize: "24px" }}
+                />
+                Loading...
+              </div>
+            )}
             <img
               className="h-full w-full object-cover"
               src={project.image}
               alt="project Image"
               loading="lazy"
+              onLoad={()=>setIsImageLoading(false)}
+              onError={()=>setIsImageLoading(false)}
             />
           </div>
           <div className="flex flex-col mt-6 lg:mt-0 lg:mx-16 lg:flex-1 justify-between">

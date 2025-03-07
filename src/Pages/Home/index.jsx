@@ -5,9 +5,13 @@ import {
   Header,
   Contact,
   Skills,
-  Projects,
+  // Projects,
   Experience,
 } from "../../components/Home";
+import { Spinner } from "reactstrap";
+import { Suspense } from "react";
+
+const Projects = React.lazy(() => import("../../components/Home/Projects"));
 const Home = () => {
   return (
     <>
