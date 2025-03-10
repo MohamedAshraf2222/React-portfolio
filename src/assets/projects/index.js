@@ -1,4 +1,3 @@
-
 import backend from "./backend.png";
 // import creator from "./creator.png";
 // import mobile from "./mobile.png";
@@ -45,6 +44,8 @@ import resturantMenu from "./resturantMenu.png";
 import questionAnswer from "./questionAnswer.png";
 import datesReminder from "./datesReminder.png";
 import shopperProject from "./shopper-vite-project.png";
+export { default as portfolioProject } from "./portfolioThree.png";
+export { default as adminDashboard } from "./adminDashboard.png";
 
 export {
   //   logo,
@@ -74,6 +75,7 @@ export {
   //   starbucks,
   //   tesla,
   //   tripguide,
+  
   carrent,
   jobit,
   shopperProject,

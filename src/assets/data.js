@@ -22,7 +22,9 @@ import {
   datesReminder,
   questionAnswer,
   resturantMenu,
-  shopperProject
+  shopperProject,
+  portfolioProject,
+  adminDashboard,
 } from "../assets/projects";
 import {
   css,
@@ -145,6 +147,42 @@ const technologies = [
 const projects = [
   {
     id: 1,
+    name: "React Admin Dashboard",
+    description:
+      "• Developed a comprehensive and feature-rich admin dashboard using React, Material-UI, and Syncfusion components for a modern and professional UI.\n" +
+      "• Integrated Syncfusion components such as grids, charts, calendars, and rich text editors for advanced data visualization and management.\n" +
+      "• Utilized React Router DOM for seamless navigation and React Icons for a consistent icon set.\n" +
+      "• Implemented Tailwind CSS for custom styling and responsive design.\n" +
+      "• Configured ESLint and Prettier for consistent code formatting and linting.\n" +
+      "• Deployed the application using React Scripts for optimized production performance.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mui",
+        color: "purple-text-gradient",
+      },
+      {
+        name: "syncfusion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: adminDashboard, // Replace with the actual image reference
+    source_code_link:
+      "https://github.com/MohamedAshraf2222/React-Admin-Dashboard",
+    live_demo_link: "https://react-admin-dashboard-tau-five.vercel.app/",
+    featured: true,
+    category: "Web Development",
+    date: "2025-05-20",
+  },
+  {
+    id: 2,
     name: "Vite React Project",
     description:
       "• Developed a modern web application using Vite, React, and Tailwind CSS for a fast and responsive user experience.\n" +
@@ -175,7 +213,43 @@ const projects = [
     date: "2025-03-07",
   },
   {
-    id: 2,
+    id: 3,
+    name: "Responsive Portfolio Website",
+    description:
+      "• Developed a highly interactive and responsive portfolio website using React, Tailwind CSS, and Framer Motion for smooth animations.\n" +
+      "• Integrated 3D elements using React Three Fiber and Drei for an immersive user experience.\n" +
+      "• Implemented React Router DOM for seamless navigation and React Tilt for interactive hover effects.\n" +
+      "• Utilized Swiper for responsive carousels and React Vertical Timeline Component for showcasing achievements.\n" +
+      "• Configured ESLint and Prettier for consistent code formatting and linting.\n" +
+      "• Deployed the application using React Scripts for optimized production performance.",
+    tags: [
+      {
+        name: "react",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "tailwind",
+        color: "pink-text-gradient",
+      },
+      {
+        name: "framer-motion",
+        color: "green-text-gradient",
+      },
+      {
+        name: "threejs",
+        color: "orange-text-gradient",
+      },
+    ],
+    image: portfolioProject,
+    source_code_link:
+      "https://github.com/your-username/responsive-portfolio-website",
+    live_demo_link: "https://your-portfolio-website-demo-link.com",
+    featured: true,
+    category: "Web Development",
+    date: "2025-04-15",
+  },
+  {
+    id: 4,
     name: "E-Commerce",
     description:
       "• Built a comprehensive e-commerce platform, enabling customers to manage shopping carts, register accounts, and authenticate via login credentials.\n" +
@@ -205,7 +279,7 @@ const projects = [
     date: "2023-05-15", // Date of project completion
   },
   {
-    id: 3,
+    id: 5,
     name: "Movies",
     description:
       "• Developed a fully responsive website using React and Bootstrap to showcase popular movies and series worldwide, with detailed information for each.\n" +
@@ -233,7 +307,7 @@ const projects = [
     date: "2023-04-20",
   },
   {
-    id: 4,
+    id: 6,
     name: "Around the World",
     description:
       "• Designed and developed a flight ticket booking platform with user authentication and registration features.\n" +
@@ -262,7 +336,7 @@ const projects = [
     date: "2023-06-10",
   },
   {
-    id: 5,
+    id: 7,
     name: "GPT-3",
     description:
       "• Developed a modern, responsive website showcasing the capabilities of GPT-3 technology.\n" +
@@ -292,7 +366,7 @@ const projects = [
     date: "2023-03-25",
   },
   {
-    id: 6,
+    id: 8,
     name: "GYM",
     description:
       "• Designed and developed a responsive gym website using native HTML and CSS.\n" +
@@ -316,7 +390,7 @@ const projects = [
     date: "2023-02-15",
   },
   {
-    id: 7,
+    id: 9,
     name: "Fitbody",
     description:
       "• Developed a responsive gym website with animated components and modern design features.\n" +
@@ -346,7 +420,7 @@ const projects = [
     date: "2023-07-01",
   },
   {
-    id: 8,
+    id: 10,
     name: "Amazon",
     description:
       "• Built a responsive e-commerce platform with animated components and modern design features.\n" +
@@ -376,7 +450,7 @@ const projects = [
     date: "2023-08-05",
   },
   {
-    id: 9,
+    id: 11,
     name: "Recipes",
     description:
       "• Developed a responsive recipes website with multiple pages and React routing.\n" +
@@ -406,7 +480,7 @@ const projects = [
     date: "2023-09-12",
   },
   {
-    id: 10,
+    id: 12,
     name: "Landing Page",
     description:
       "• Designed and developed a responsive landing page with modern design elements.\n" +
@@ -434,7 +508,7 @@ const projects = [
     date: "2023-10-01",
   },
   {
-    id: 11,
+    id: 13,
     name: "Minimal Shopping",
     description:
       "• Developed a minimalistic e-commerce application using React and RESTful APIs.\n" +
@@ -464,7 +538,7 @@ const projects = [
     date: "2023-11-15",
   },
   {
-    id: 12,
+    id: 14,
     name: "Restaurant Menu",
     description:
       "• Developed a responsive restaurant menu website with React and Bootstrap.\n" +
@@ -493,7 +567,7 @@ const projects = [
     date: "2023-12-05",
   },
   {
-    id: 13,
+    id: 15,
     name: "Question and Answer",
     description:
       "• Developed a responsive Q&A platform with React and Bootstrap.\n" +
@@ -523,7 +597,7 @@ const projects = [
     date: "2024-01-10",
   },
   {
-    id: 14,
+    id: 16,
     name: "Dates Reminder",
     description:
       "• Developed a responsive dates reminder application with React and Bootstrap.\n" +
