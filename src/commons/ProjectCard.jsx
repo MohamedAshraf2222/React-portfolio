@@ -22,27 +22,29 @@ const ProjectCard = ({
       <div className="flex flex-col justify-between p-4 sm:p-5 w-[90%] h-auto rounded-2xl shadow sm:w-[360px] works-hover">
         {/* Image Section */}
         <div>
+          {isImageLoading && (
+            <div className="flex justify-center items-center h-[180px] sm:h-[230px] w-full bg-white">
+              <div className="text-center">
+                <i
+                  className="mdi mdi-loading mdi-spin me-2"
+                  style={{ fontSize: "24px" }}
+                />
+                Loading...
+              </div>
+            </div>
+          )}
           <Link to={`/project/${id}`} onClick={() => scrollToTop()}>
             <div className="relative w-full h-[180px] sm:h-[230px] transition-all duration-300 hover:scale-[1.05]">
               <img
                 src={image}
                 alt={"image"}
-                className="object-cover w-full h-full rounded-2xl"
+                className={`object-cover w-full h-full rounded-2xl ${
+                  isImageLoading ? "hidden" : "block"
+                }`}
                 loading="lazy"
                 onLoad={() => setIsImageLoading(false)}
                 onError={() => setIsImageLoading(false)}
               />
-              {isImageLoading && (
-                <div className="flex justify-center items-center h-full w-full">
-                  <div className="text-center">
-                    <i
-                      className="mdi mdi-loading mdi-spin me-2"
-                      style={{ fontSize: "24px" }}
-                    />
-                    Loading...
-                  </div>
-                </div>
-              )}
             </div>
           </Link>
 
